@@ -25,7 +25,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css",
+              "src/assets/vendor/bootstrap/css/bootstrap.css",
+              "src/assets/vendor/glightbox/css/glightbox.min.css",
+              "src/assets/vendor/remixicon/remixicon.css",
+              "src/assets/vendor/swiper/swiper-bundle.min.css",
+              "src/assets/css/style.css"
             ],
             "scripts": []
           },
