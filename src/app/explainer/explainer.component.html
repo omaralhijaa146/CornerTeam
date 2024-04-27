@@ -12,27 +12,9 @@
     <div class="content p-0 pt-2 col-md-11 ">
       <div class="chat-content-area">
 
-        <!-- START USER CHAT -->
-        <div class="row user-chat-box">
-          <div class="chat-icon">
-            <img class="chatgpt-icon" src="images/user-icon.png" />
-          </div>
-          <div class="chat-txt">who are you?</div>
-        </div>
-
+        <app-user-message></app-user-message>
         <!-- START GPT CHAT -->
-        <div class="row gpt-chat-box">
-          <div class="chat-icon">
-            <img class="chatgpt-icon" src="images/chatgpt-icon.png" />
-          </div>
-          <div class="chat-txt">
-            I am ChatGPT, a large language model developed by OpenAI. I am
-            an artificial intelligence designed to process and generate
-            human-like text based on the input provided to me. I am here to
-            assist you with any questions or tasks you may have to the best
-            of my abilities!
-          </div>
-        </div>
+        <app-response></app-response>
       </div>
 
     </div>
@@ -60,7 +42,8 @@
       <div class="col-12 chat-inputs-area-inner">
         <div class="row chat-inputs-container d-flex align-items-center">
           <!--              <textarea name="" id="" class="col-11" placeholder="Send a message"></textarea>-->
-          <input type="file" class="form-control col-11 rounded-5" id="formFile">
+          <input (change)="setData($event)" name="pdf_file" accept=".pdf"  type="file" class="form-control col-sm-6 rounded-5" id="formFile" multiple>
+<!--          <button (click)="submit()">Submit</button>-->
           <span class="col-1"><i class="fa fa-paper-plane text-bg-danger" aria-hidden="true"></i>
                 </span>
         </div>
